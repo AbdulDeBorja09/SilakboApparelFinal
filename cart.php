@@ -9,7 +9,7 @@
 
     if (isset($_POST['logout'])){
         session_destroy();
-        header('location:login.php?');
+        header('location:index.php?');
     }
 
     if (isset($_POST['add_to_cart'])){

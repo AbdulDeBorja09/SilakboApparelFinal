@@ -4,12 +4,12 @@
     $user_id = $_SESSION['user_id'];
 
     if (!isset($user_id)){
-        header('location:login.php');
+        header('location:index.php');
     }
 
     if (isset($_POST['logout'])){
         session_destroy();
-        header('location:login.php');
+        header('location:index.php');
     }
     
     if(isset($_POST['submit-btn'])){

@@ -35,7 +35,7 @@
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
             <a
-              href="admin_pannel.php"
+              href="home.php"
               class="navbar-brand text-white p-0"
             >
               Silakbo</a
@@ -59,7 +59,7 @@
               >
                 <li class="nav-item">
                   <a
-                    href="index.php#sectionhome"
+                    href="home.php#sectionhome"
                     class="nav-link active text-white"
                     aria-current="page"
                     >Home</a

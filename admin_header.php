@@ -74,10 +74,10 @@
                   <a href="admin_orders.php" class="nav-link text-white">Orders</a>
                 </li>
                 <li class="nav-item">
-                  <a href="Admin_user.php" class="nav-link text-white">Users</a>
+                  <a href="admin_user.php" class="nav-link text-white">Users</a>
                 </li>
                 <li class="nav-item">
-                  <a href="Admin_messages.php" class="nav-link text-white"
+                  <a href="admin_messages.php" class="nav-link text-white"
                     >Messages</a
                   >
                 </li>

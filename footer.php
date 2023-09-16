@@ -58,7 +58,7 @@
               SITE LINKS
             </h5>
             <p>
-              <a href="index.php#sectionhome" class="text-white">HOME</a>
+              <a href="home.php#sectionhome" class="text-white">HOME</a>
             </p>
             <p>
               <a href="product.php" class="text-white">PRODUCT</a>

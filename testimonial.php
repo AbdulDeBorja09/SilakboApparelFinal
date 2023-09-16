@@ -4,12 +4,12 @@
     $admin_id = $_SESSION['user_name'];
 
     if (!isset($admin_id)){
-        header('location:login.php');
+        header('location:index.php');
     }
     
     if (isset($_POST['logout'])){
         session_destroy();
-        header('location:login.php');
+        header('location:index.php');
     }
 ?>
 

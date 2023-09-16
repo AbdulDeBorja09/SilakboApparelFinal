@@ -25,7 +25,7 @@
       }else{
         mysqli_query($conn, "INSERT INTO `users` (`name`, `email` , `password`) VALUES ('$name', '$email', '$password')") or die ('query failed');
         $message[] = 'Register Successfully';
-        header('location:login.php');
+        header('location:index.php');
       }
     }
   }
@@ -122,7 +122,7 @@
               set out by the user agreement</label
             >
             <br><br>
-            <a href="login.php" class="p-3">&nbsp; Already have an account?</a>
+            <a href="index.php" class="p-3">&nbsp; Already have an account?</a>
           </div>
           <div class="container text-center p-3" >
             <input
