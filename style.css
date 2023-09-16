@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Titillium+Web:wght@200&display=swap");
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid white;
+}
+.online {
+  padding: 50px;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+}
+.forgot:hover {
+  color: black;
+  text-decoration: underline 1px;
+}
+.register:hover {
+  color: black;
+  text-decoration: underline 2px;
+}
+/* button:hover {
+  transform: scale(1.1);
+} */
+.far:hover {
+  transform: scale(1.1);
+}
+.Productimg {
+  width: 100%;
+  padding: 10px;
+}
+.ProductCard:hover {
+  background-color: white;
+  box-shadow: 3px 3px 5px rgb(200, 200, 200);
+}
+.carts:hover {
+  background-color: white;
+  color: white;
+  font-weight: 700;
+}
+.imgBox {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: auto;
+  border: 1px dashed #262626;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.imgBox img {
+  width: 100%;
+}
+iframe {
+  width: 80%;
+  height: 500px;
+}
+.message {
+  text-align: center;
+  text-transform: capitalize;
+  width: 59%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  background: #262626;
+  color: #fff;
+}
