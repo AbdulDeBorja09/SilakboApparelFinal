@@ -61,6 +61,7 @@
     <br>
     <br>
     <div class="container">
+      <form method="POST">
       <div class="row p-3">
         <div class="col-sm-5 xl-12">
           <br />
@@ -77,10 +78,7 @@
           <p style="font-size: 13px">(+63) 969-156-9350</p>
         </div>
         <div class="col-sm-7 xl-12">
-          <form
-            class="row"
-            method="POST"
-          >
+          <div class="row">
             <div class="col-12 p-1" style="font-weight: 700">
               <label for="name" class="form-label">Your Name (Required) </label>
               <input
@@ -143,15 +141,18 @@
                 required
               ></textarea>
             </div>
-            <div class="container text-center p-4">
-              <button name="submit-btn" class="btn btn-dark" type="submit">SUBMIT</button>
-            </div>
-          </form>
+            
+          </div>
         </div>
       </div>
+        <div class="container text-center p-4">
+          <button name="submit-btn" class="btn btn-dark" type="submit">SUBMIT</button>
+        </div>
+      </form>
     </div>
-    <div class="container-{breakpoint} text-center ">
-        <h1 style="text-decoration: underline 1px black; ">SILAKBO APPAREL LOCATION</h1>
+    
+    <div class="container-{breakpoint} text-center " style="padding-top: 50px;">
+          <h1 style="border-bottom: 1px solid; width: 30%;" class="mx-auto">SILAKBO APPAREL LOCATION</h1>
       <br>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7736.448937414875!2d121.22378996341888!3d14.181626960168582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1690183729762!5m2!1sen!2sph"

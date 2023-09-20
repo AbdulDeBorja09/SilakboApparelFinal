@@ -12,34 +12,16 @@
         header('location:index.php?');
     }
 
-    if (isset($_POST['add_to_cart'])){
-      $product_id = $_POST['product_id'];
-      $product_name = $_POST['product_name'];
-      $product_price = $_POST['product_price'];
-      $product_image = $_POST['product_image' ];
-      $product_quantity = 1;
-      
-      $cart_num = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die ('query failed');
-
-      if(mysqli_num_rows($cart_num)>0){
-        $message[] = 'Product Already exist in cart';
-      }else{
-        mysqli_query($conn, "INSERT INTO `cart` ( `user_id`, `pid`, `name`, `price`, `quantity`, `image`) VALUES ('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image')");
-        $message[] = 'Product successfuly added in your cart';
-      }
-    }
-
     if(isset($_POST['update_qty_btn'])){
         $update_qty_id = $_POST['update_qty_id'];
         $update_value = $_POST['update_qty'];
+        $update_size = $_POST['update_size'];
 
-        $update_query = mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_value'") or die ('query failed');
+        $update_query = mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_value', size = '$update_size'") or die ('query failed');
         if($update_query){
             header('location:cart.php');
         }
     }
-
-
 
     if(isset($_GET['delete'])){
       $delete_id = $_GET['delete'];
@@ -103,8 +85,9 @@
             if(mysqli_num_rows($select_cart)>0){
                 while($fetch_cart = mysqli_fetch_assoc($select_cart)){
             ?>
+            <form method="POST">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 col-sm-12" style="padding: 20px;">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <img src="image/<?php echo $fetch_cart['image']; ?>" class="w-100">
@@ -115,25 +98,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12" style="padding: 20px;">
+                <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12 col-sm-12">
-                            <form method="POST">
+                        <div class="col-lg-3 col-md-12 col-sm-12">
+                        <select id="size" name="update_size" style="border-radius: 5px; width: 100px">
+                          <option selected value="<?php echo $fetch_cart['size']?>"><?php echo $fetch_cart['size']?></option>
+                          <option value="Small">Small</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Large">Large</option>
+                          <option value="Extra Large">Extra Large</option>
+                        </select>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12">
                                 <a href="cart.php?delete=<?php echo $fetch_cart['id'] ?>" class="btn" onclick="return confrim('Do you want to remove this product from your wishlist?')"><i class="fa-solid fa-xmark" style="color: #000000;"></i></a>
                                 <input name="update_qty_id" type="hidden" name="" value="<?php echo $fetch_cart['id'] ?>">
                                 <input  name="update_qty" style="width: 30px;" type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>">
                                 <button name="update_qty_btn" class="btn" type="submit" value=""><i class="fa-solid fa-check" style="color: #000000;"></i></button>
-                            </form>
                         </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12">
-                            <p class=""><?php echo $fetch_cart['price'] ?></p>
-                        </div>
-                        <div class="col-lg-4 col-sm-12">
+                        <div class="col-lg-3 col-sm-12">
                         <h5 class="text-danger"><?php echo $total_amt = ($fetch_cart['price']*$fetch_cart['quantity']) ?></h5>
+                        </div>
+                        <div class="col-lg-3 col-sm-12">
+                          <h5 class="text-danger"><?php echo $total_amt = ($fetch_cart['price']*$fetch_cart['quantity']) ?></h5>
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
             <?php  
                 $grand_total+=$total_amt;
                 }

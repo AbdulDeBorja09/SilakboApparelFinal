@@ -44,11 +44,10 @@
     <?php 
     include 'header.php'
     ?>
-    <div class="container">
-      <div class="container-fluid">
+      <div class="container">
         <h1 class="m-5" style="text-align: center">OFFICIAL DISTRIBUTORS</h1>
         <div class="row align-content-center m-lg-5" style="padding: 30px;">
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6  col-sm-12">
             <h6 style="font-weight: 700">Silakbo Main Branch</h6>
             <p class="fs-">
               <i class="fas fa-map-marker-alt mr-2"></i> &nbsp;Brgy. Maahas Bay
@@ -57,25 +56,25 @@
               <i class="fas fa-phone mr-2"></i> 09612058240
             </p>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <h6 style="font-weight: 700">Silakbo Quezon City</h6>
             <p>
               <i class="fas fa-map-marker-alt mr-2"></i> &nbsp;Gateway Mall,
-              Araneta Center, Cubao<br />
+              Araneta, Cubao<br />
               <a href="https://www.facebook.com/profile.php?id=100095213707424" style="color:black"><i class="fab fa-facebook mr-2"></i> Silakbo Qc</a><br />
               <i class="fas fa-phone mr-2"></i> 09913604691
             </p>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6  col-sm-12">
             <h6 style="font-weight: 700">Silakbo Makati</h6>
             <p>
               <i class="fas fa-map-marker-alt mr-2"></i> &nbsp;116 Gamboa
-              Street, Legaspi, Makati<br />
+              Street, Makati<br />
               <a href="https://www.facebook.com/profile.php?id=100095213707424" style="color:black"><i class="fab fa-facebook mr-2"></i> Silakbo Makati</a><br />
               <i class="fas fa-phone mr-2"> </i> 0998066734
             </p>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6  col-sm-12">
             <h6 style="font-weight: 700">Silakbo Iloilo</h6>
             <p>
               <i class="fas fa-map-marker-alt mr-2"></i> &nbsp;2nd Floor,
@@ -84,7 +83,7 @@
               <i class="fas fa-phone mr-2"></i> 0999558930
             </p>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6  col-sm-12">
             <h6 style="font-weight: 700">Hibla De kalidad</h6>
             <p>
               <i class="fas fa-map-marker-alt mr-2"></i>&nbsp;163 Gen Mascardo
@@ -93,7 +92,7 @@
               <i class="fas fa-phone mr-2"></i> 0909238456
             </p>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6  col-sm-12">
             <h6 style="font-weight: 700">Qualithrift</h6>
             <p>
               <i class="fas fa-map-marker-alt mr-2"></i> &nbsp;2nd Floor,
@@ -102,7 +101,7 @@
               <i class="fas fa-phone mr-2"></i> 0991293352
             </p>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6  col-sm-12">
             <h6 style="font-weight: 700">House of Local</h6>
             <p>
               <i class="fas fa-map-marker-alt mr-2"></i> &nbsp;Brgy. Maahas Bay
@@ -111,7 +110,7 @@
               <i class="fas fa-phone mr-2"></i> 09913604691
             </p>
           </div>
-          <div class="col-6 col-sm-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <h6 style="font-weight: 700">Pinoy Drip</h6>
             <p>
               <i class="fas fa-map-marker-alt mr-2"></i> &nbsp;Alabang Town
@@ -122,7 +121,6 @@
           </div>
         </div>
       </div>
-    </div>
     <div style="padding: 30px"></div>
     <?php 
       include 'footer.php'

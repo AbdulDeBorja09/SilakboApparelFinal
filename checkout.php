@@ -17,7 +17,7 @@
       $email = mysqli_real_escape_string($conn, $_POST['email']);
       $number = mysqli_real_escape_string($conn, $_POST['contact']);
       $method = mysqli_real_escape_string($conn, $_POST['method']);
-      $address =  mysqli_real_escape_string($conn,'flate no. '.$_POST['house'].','.$_POST['street'].','.$_POST['city'].','.$_POST['state'].','.$_POST['postal'].','.$_POST['country']);
+      $address =  mysqli_real_escape_string($conn,'House no. '.$_POST['house'].', '.$_POST['street'].', '.$_POST['city'].', '.$_POST['state'].', '.$_POST['postal'].', '.$_POST['country']);
       $placed_on = date('d-M-Y');
       $cart_total = 0;
       $cart_product[] = '';
@@ -25,7 +25,7 @@
       $cart_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die ('query failed');
       if(mysqli_num_rows($cart_query)>0){
         while($cart_item=mysqli_fetch_assoc($cart_query)){
-          $cart_product[] = $cart_item['name'].' ('.$cart_item['quantity'].')';
+          $cart_product[] = $cart_item['name'].' ('.$cart_item['quantity'].') ('.$cart_item['size'].')' ;
           $sub_total = ($cart_item['price']* $cart_item['quantity']);
           $cart_total += $sub_total;
         }
@@ -35,7 +35,7 @@
       ('$user_id', '$name', '$email', '$number', '$method', '$address', '$total_products', '$cart_total', '$placed_on')");
       mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'");
       $message[] = 'order placed successfully';
-      header('location:checkout.php');
+      header('location:confirm.php');
     }
 ?> 
 <!DOCTYPE html>
@@ -193,6 +193,7 @@
            
               <tr class="text-center">
                 <th>Name</th>
+                <th>Size</th>
                 <th>Qty.</th>
                 <th>Cost</th>
                 <th class="text-xs-right">Subtotal</th>
@@ -207,9 +208,12 @@
                 $grand_total = $total+=$total_price;
             
             ?>
-            <tr>
+            <tr class="text-center">
               <td>
                 <b><?php echo $fetch_cart ['name']; ?></b>
+              </td>
+              <td>
+                <b><?php echo $fetch_cart ['size']; ?></b>
               </td>
               <td class="text-center">
                 <?php echo $fetch_cart ['quantity']; ?>
@@ -223,10 +227,6 @@
             </tr>
 
             <?php
-            
-            
-
-
               }
             }
           ?> 
@@ -236,7 +236,7 @@
             <h4 style="padding-right: 45px;"><b>Php <?= $grand_total?></b></h4>
           </div>
           <div class="d-flex justify-content-evenly">
-            <a href="product.html" class="btn btn-outline-dark"
+            <a href="product.php" class="btn btn-outline-dark"
               >Continue Shopping</a
             >
           

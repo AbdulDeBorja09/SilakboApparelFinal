@@ -17,6 +17,7 @@
       $product_name = $_POST['product_name'];
       $product_price = $_POST['product_price'];
       $product_image = $_POST['product_image' ];
+      $product_size = $_POST['product_size'];
       $product_quantity = 1;
       
       $cart_num = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die ('query failed');
@@ -24,7 +25,7 @@
       if(mysqli_num_rows($cart_num)>0){
         $message[] = 'Product Already exist in cart';
       }else{
-        mysqli_query($conn, "INSERT INTO `cart` ( `user_id`, `pid`, `name`, `price`, `quantity`, `image`) VALUES ('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image')");
+        mysqli_query($conn, "INSERT INTO `cart` ( `user_id`, `pid`, `name`, `price`, `quantity`, `image`, `size`) VALUES ('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image','$product_size')");
         $message[] = 'Product successfuly added in your cart';
       }
     }
@@ -62,21 +63,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Poiret+One&family=Rajdhani:wght@300&display=swap");
     </style>
     <title>Silakbo | Products</title>
-    <style>
-      .carousel-inner {
-        padding: 18px;
-        border-radius: 25px;
-      }
-      .carousel-caption {
-        position: static;
-        color: black;
-      }
-      .carousel-caption h3 {
-        margin-bottom: 15px;
-        margin-top: 15px;
-        color: black;
-      }
-    </style>
   </head>
   <body>
     <?php 
@@ -90,9 +76,19 @@
           <div class="text-center" style="padding: 20px">
             <h1 class="">MY WISHLIST</h1>
           </div>
+          <?php
+              if(isset($message)){
+                foreach ($message as $message) {
+                echo'
+                    <div class="alert alert-dark" role="alert text-center p-3"  >
+                    '.$message.'
+                    </div>
+                  ';
+                }
+              }
+          ?>
           <div class="row">
             <?php 
-            
               $select_wishlist = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die ('query failed');
               if(mysqli_num_rows($select_wishlist)>0){
                   while($fetch_wishlist = mysqli_fetch_assoc($select_wishlist)){
@@ -104,13 +100,15 @@
                 <img src="image/<?php echo $fetch_wishlist['image']; ?>" class="Productimg">
                 <br><br>
                 <h5 class="title" style="font-weight: 700"><?php echo $fetch_wishlist['name']; ?></h5>
-                <p class="text-danger">Php <?php echo $fetch_wishlist['price']; ?></p>
+                <p>Size: <?php echo $fetch_wishlist['size']; ?></p>
+                <h3 class="text-danger">Php <?php echo $fetch_wishlist['price']; ?></h3>
                 <input type="hidden" name="product_id" value="<?php echo $fetch_wishlist['id']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_wishlist['name']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_wishlist['price']; ?>">
                 <input type="hidden" name="product_image" value="<?php echo $fetch_wishlist['image']; ?>">
+                <input type="hidden" name="product_size" value="<?php echo $fetch_wishlist['size']; ?>">
                 <div class="button  text-white d-flex mx-auto justify-content-evenly align-items-center">
-                  <a  class="btn btn-outline-dark" style="width: 60%;" > ADD TO CART &nbsp; <i class="fa-brands fa-opencart" style="color: #000000"></i></a>
+                  <button  class="btn btn-outline-dark" name="add_to_cart" > ADD TO CART &nbsp; <i class="fa-brands fa-opencart" style="color: #000000"></i></button>
                   <a href="wishlist.php?delete=<?php echo $fetch_wishlist['id'] ?>" class="btn btn-dark" onclick="return confrim('Do you want to remove this product from your wishlist?')"><i class="fa-regular fa-trash-can" style="color: #e8e8e8;"></i></a>
                   <br /><br />
                 </div>

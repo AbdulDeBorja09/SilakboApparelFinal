@@ -21,7 +21,7 @@
         $image_tmp_name = $_FILES['image']['tmp_name'];
         $image_folder = 'image/'.$image;
 
-        $select_prodcut_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = 'product_name' ") or die ('query failed');
+        $select_prodcut_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$product_name' ") or die ('query failed');
         if(mysqli_num_rows($select_prodcut_name)>0){
             $message[] = 'Product name already exist';
         }else{
@@ -132,7 +132,7 @@
             if(mysqli_num_rows($edit_query)>0){
                 while($fetch_edit = mysqli_fetch_assoc($edit_query)){
         ?>
-        <section class="update-container">
+        <section class="update-container" id="editproducts">
             <div class="container shadow-lg text-center" style="padding: 50px;">
             <h1 >Edit Product</h1>
             <form method="POST" enctype="multipart/form-data" class="d-flex flex-column">

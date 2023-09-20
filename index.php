@@ -13,23 +13,24 @@
 
     if(mysqli_num_rows($select_user)>0){
       $row = mysqli_fetch_assoc($select_user);
-      if($row['user_type']== 'admin') {
+      if($row['user_type'] == 'admin') {
         $_SESSION['admin_name'] = $row['name'];
         $_SESSION['admin_email'] = $row['email'];
         $_SESSION['admin_id'] = $row['id'];
+        $id = $_SESSION['id'];
         header('location:admin_pannel.php');
 
-      }else if($row['user_type']== 'user') {
+      }else if($row['user_type'] == 'user') {
         $_SESSION['user_name'] = $row['name'];
         $_SESSION['user_email'] = $row['email'];
-        
         $_SESSION['user_id'] = $row['id'];
         header('location:home.php#sectionhome');
-
-      }else{
-        $message[]= 'Incorrect email or password';
-      }   
+        
+      }
     }
+    else{
+      $message[]= 'Incorrect email or password';
+    }   
   }
 ?> 
 <!DOCTYPE html>
@@ -57,11 +58,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Poiret+One&family=Rajdhani:wght@300&display=swap");
     </style>
-    <style>
-      * {
-        font-weight: bolder;
-      }
-    </style>
     <title>Silakbo | Sign Up</title>
   </head>
   <body>
@@ -76,25 +72,15 @@
             <div class="row p-5">
               <div class="container p-3">
                 <h1 class="text-center">SILAKBO APPAREL</h1>
-              <?php
-                if(isset($message)){
-                  foreach ($message as $message) {
-                  echo'
-                      <div class="alert alert-danger" role="alert text-center p-3"  >
-                      '.$message.'
-                      </div>
-                    ';
-                  }
-                }
-              ?>
               </div>
               <div
-                class="col-lg-5 col-sm-6 align-middle text-center mx-auto p-1"
+                class="col-lg-5 col-md-12 align-middle text-center mx-auto p-1"
               >
                 <img src="Resources/loginimage.png" class="w-100" />
               </div>
-              <div class="col-lg-6 col-sm-6 mx-auto" style="font-size: large">
-                <label for="username" style="font-weight: 700" class="m-1">
+              <div class="col-lg-6 col-md-12 mx-auto" style="font-size: large">
+               <br> 
+              <label for="username" style="font-weight: 700" class="m-1">
                   Email:
                 </label>
                 <input
@@ -116,8 +102,19 @@
                   placeholder="*************"
                 />
                 <br />
-                <br /><br /><br />
                 <br />
+                <?php
+                    if(isset($message)){
+                      foreach ($message as $message) {
+                      echo'
+                          <div class="alert alert-danger" role="alert text-center p-3"  >
+                          '.$message.'
+                          </div>
+                        ';
+                      }
+                    }
+                ?>
+                <br>
                 <div class="d-grid gap-2 col-4 mx-auto">
                   <input
                     type="submit"
@@ -128,9 +125,7 @@
                 </div>
                 <div class="container">
                   <br />
-                  <br />
-                  <br />
-                  <br />
+                  <br>
                 </div>
                 <hr />
                 <div class="container">

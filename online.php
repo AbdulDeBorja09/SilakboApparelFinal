@@ -49,13 +49,13 @@
       <div class="container bg-light">
         <div class="row">
           <div class="col">
-            <a href="https://shopee.ph" class="text-black">
+            <a href="https://shopee.ph" target="_blank" class="text-black">
               <h1 class="text-center m-3">SHOPEE</h1>
               <img src="Resources/Shopee.png" class="w-100" />
             </a>
           </div>
           <div class="col">
-            <a href="https://www.lazada.com.ph" class="text-black">
+            <a href="https://www.lazada.com.ph" target="_blank" class="text-black">
               <h1 class="text-center m-3">LAZADA</h1>
               <img src="Resources/Lazada.png" class="w-100" />
             </a>

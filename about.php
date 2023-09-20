@@ -90,7 +90,6 @@
       <div class="row justify-content-center">
         <div class="col-lg-6">
           <br />
-          <br />
           <h3 class="text-center" style="font-weight: 700">MISSION</h3>
           <p style="font-size: 20px" class="p-3">
             <em>Silakbo</em> aims to educate every Filipino that mental
@@ -99,10 +98,9 @@
             suffering from mental ilness can be cured and live meaningful lives
             in their communities.
           </p>
-          <br /><br />
         </div>
         <div class="col-lg-6">
-          <br /><br />
+          <br />
           <h3 class="text-center" style="font-weight: 700">VISION</h3>
           <p style="font-size: 20px" class="p-3">
             To make <em>Silakbo</em> and our <em>cause</em> be recognized
@@ -111,17 +109,15 @@
             And To further our cause not only here in the Philippines but also
             in every parts of the world
           </p>
-          <br /><br />
         </div>
         <div class="col-lg-6">
-          <br />
           <h3 class="text-center" style="font-weight: 700">GOAL</h3>
           <p style="font-size: 20px" class="p-3">
             Inform and educate everyone that Mental Illness exist and can affect
             anyone. But Mental Ilness is curable. To make the world a better and
             more beautiful place, through our brands and designs
           </p>
-          <br /><br />
+          <br />
         </div>
       </div>
     </div>

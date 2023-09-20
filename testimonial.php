@@ -1,9 +1,9 @@
 <?php
     include 'connection.php';
     session_start();
-    $admin_id = $_SESSION['user_name'];
+    $user_id = $_SESSION['user_name'];
 
-    if (!isset($admin_id)){
+    if (!isset($user_id)){
         header('location:index.php');
     }
     
@@ -27,10 +27,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <script
       src="https://kit.fontawesome.com/8a364c3095.js"
       crossorigin="anonymous"
@@ -42,11 +39,38 @@
     <title>Silakbo | Home</title>
   </head>
   <body>
-   
+    <?php include 'header.php' ?>
+    <div class="container" style="padding: 50px;">
+      <div class="text-center">
+        <h1>SILAKBO REVIEW</h1>
+      </div>
+      <div class="row">
+        <?php 
+          $select_review = mysqli_query($conn, "SELECT * FROM `review`") or die ('query failed');
+          if(mysqli_num_rows($select_review)>0){
+              while($fetch_review = mysqli_fetch_assoc($select_review)){
+          ?>
+              <div class="shadow-sm" style="padding: 30px;">
+                <div class="container">
+                  <h4><?php echo $fetch_review['name']; ?></h4>
+                  <p><?php echo $fetch_review['message']; ?></p>
+                  <h6><?php echo $fetch_review['date']; ?></h6>
+                </div>
+              </div>
+            <?php 
+              }
+            }
+          ?>
+    </div>
+  </div>
+
+
+   <?php include 'footer.php' ?>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
   </body>
 </html>

@@ -44,7 +44,7 @@
               to both improve understanding and increase access to healthcare.
             </p>
             <a
-              href="about.html"
+              href="about.php"
               class="text-white"
               style="text-decoration: none"
               >READ MORE>></a
@@ -78,21 +78,18 @@
               class="text-uppercase mb-4 font-weight-bold text-light"
               style="font-weight: 700"
             >
-              LANGUAGES
+              Online Shop
             </h5>
             <p>
-              <a href="#" class="text-white">ENGLISH</a>
+              <a href="terms.php" class="text-white">TERMS & CONDITION</a>
             </p>
             <p>
-              <a href="#" class="text-white">ESPAÑOL</a>
+              <a href="sizechart.php" class="text-white">SIZE CHART</a>
             </p>
             <p>
-              <a href="#" class="text-white">TAGALOG</a>
+              <a href="https://shopee.ph" target="_blank" class="text-white">SHOPEE</a>
             </p>
-            <p><a href="#" class="text-white">JAPANESE</a></p>
-            <p>
-              <a href="#" class="text-white">DUTCH</a>
-            </p>
+            <p><a href="https://www.lazada.com.ph" target="_blank" class="text-white">LAZADA</a></p>
           </div>
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5
@@ -114,9 +111,9 @@
             <p><i class="fas fa-phone mr-3 m-2"></i>+63 961 2058 240</p>
             <p><i class="fas fa-print mr-3 m-2"></i>+04 599 434 211</p>
             <p>
-              <a href=""><i class="fab fa-facebook m-3 text-white"></i></a>
-              <a href=""><i class="fab fa-instagram m-3 text-white"></i></a>
-              <a href=""><i class="fa fa-twitter m-3 text-white"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100095213707424" target="_blank"><i class="fab fa-facebook m-3 text-white"></i></a>
+              <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram m-3 text-white"></i></a>
+              <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter m-3 text-white"></i></a>
             </p>
           </div>
         </div>

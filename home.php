@@ -2,6 +2,7 @@
     include 'connection.php';
     session_start();
     $user_id = $_SESSION['user_id'];
+    
 
     if (!isset($user_id)){
         header('location:index.php');
@@ -117,54 +118,54 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card h-100">
-              <img src="./shirts/T3.png" />
+              <img src="Resources/BestSeller/Mindful moment.png" />
               <div class="card-body">
                 <br />
                 <h5 class="card-title" style="font-weight: 700">
-                  Make Today Ridiculously Amazing
+                  Mindful Moment
                 </h5>
-                <h6 class="card-subtitle">"Large"</h6>
-                <p class="card-text text-danger">PHP 999.999</p>
+                <h6><s>Php 999.00</s></h6>
+                <p class="card-text text-danger">PHP 700.00</p>
               </div>
               <div class="button text-center">
                 <button type="button" class="btn bg-black m-3">
-                  <a href="product.html" class="text-white">BUY NOW</a>
+                  <a href="product.php" class="text-white">BUY NOW</a>
                 </button>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card h-100">
-              <img src="./shirts/T7.png" />
+              <img src="Resources/BestSeller/Peace Love.png" />
               <div class="card-body">
                 <br />
                 <h5 class="card-title" style="font-weight: 700">
-                  Believe in Yourself
+                  Peace Loved
                 </h5>
-                <h6 class="card-subtitle">"Large"</h6>
-                <p class="card-text text-danger">PHP 699.95</p>
+                <h6><s>Php 999.00</s></h6>
+                <p class="card-text text-danger">PHP 700.00</p>
               </div>
               <div class="button text-center">
                 <button type="button" class="btn bg-black m-3">
-                  <a href="product.html" class="text-white">BUY NOW</a>
+                  <a href="product.php" class="text-white">BUY NOW</a>
                 </button>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card h-100">
-              <img src="./shirts/T1.png" />
+            <img src="Resources/BestSeller/Radiate Kindness.png" />
               <div class="card-body">
                 <br />
                 <h5 class="card-title" style="font-weight: 700">
-                  I am Beautiful
+                  Radiate Kindness
                 </h5>
-                <h6 class="card-subtitle">"Medium"</h6>
-                <p class="card-text text-danger">PHP 550.00</p>
+                <h6><s>Php 999.00</s></h6>
+                <p class="card-text text-danger">PHP 700.00</p>
               </div>
               <div class="button text-center">
                 <button type="button" class="btn bg-black m-3">
-                  <a href="product.html" class="text-white">BUY NOW</a>
+                  <a href="product.php" class="text-white">BUY NOW</a>
                 </button>
               </div>
             </div>

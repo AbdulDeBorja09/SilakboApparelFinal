@@ -72,6 +72,17 @@
         <h3 class="ps-3 text-center">SILAKBO APPAREL</h3>
         <br>
         <br>
+        <?php
+            if(isset($message)){
+              foreach ($message as $message) {
+              echo'
+                  <div class="alert alert-dark" role="alert text-center p-3"  >
+                  '.$message.'
+                  </div>
+                ';
+              }
+            }
+        ?>
         
         <form class="row" method="post">
           <div class="col-lg-5 col-md-12 m-2">
