@@ -36,7 +36,7 @@
     ></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="path/to/sweetalert2.min.css" />
-    <title>Silakbo | Check Out</title>
+    <title>Thank you!!</title>
     <style>
       .check {
         width: 20%;

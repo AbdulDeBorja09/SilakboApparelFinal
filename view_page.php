@@ -151,8 +151,38 @@
                     <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
               </div>
               <div class="container " style="padding: 40px;">
-                <h5><b>Product Description: <?php echo $fetch_products['name']; ?></b></h5>
-                <pre style="font-family: Titillium Web, sans-serif;" class="fs-5"><?php echo $fetch_products['product_detail']; ?></pre>
+                <h5><b>Product Description: </b></h5>
+                <p class="fs-4"><?php echo $fetch_products['product_detail']; ?></p>
+                <br>
+                <h5><b>Key Features: </b></h5>
+                <ol type="A" class="fs-5">
+                  <li><b>Premium Quality: </b><?php echo $fetch_products['quality']; ?></li>
+                  <li><b>Shirt Design: </b><?php echo $fetch_products['design']; ?></li>
+                  <li><b>Comfort Fit: </b> <?php echo $fetch_products['fit']; ?></li>
+                  <li><b>Inspiring Message: Printed with </b> <?php echo $fetch_products['message']; ?></li>
+                  <li><b>Versatile Wardrobe Essential:</b> <?php echo $fetch_products['esential']; ?></li>
+                </ol>
+                <br>
+                <h5><b>Availble Sizes: </b><?php echo $fetch_products['size']; ?></h5>
+                <br>
+                <h5><b>Price: </b><?php echo $fetch_products['price']; ?></h5>
+                <br>
+                <h5><b>Shipping Information: </b></h5>
+                <p class="fs-5">
+                  We offer worldwide shipping to bring the Mindful Moment T-shirt to your doorstep, no matter where you are. Our shipping options include standard and expedited services to accommodate your needs.
+                </p>
+                <ul class="fs-5">
+                  <li><b>Standard Local: </b>Estimated delivery within 10-15 business days.</li>
+                  <li><b>Express Local: </b>Estimated delivery within 3-5 business days.</li>
+                </ul>
+                <i class="fs-5" >Please note that shipping times may vary based on your location and customs regulations in your country.</i>
+                <br><br>
+                <h5><b>Return and Refund Policy:</b></h5>
+                <p class="fs-5">We take pride in the quality of our products. If for any reason you are not completely satisfied with your purchase, you may return it within 30 days of receiving your order for a full refund or exchange. The item must be unused and in the same condition that you received it. Please contact our customer support team to initiate the return process.</p>
+                <br>
+                <h5><b>Note: </b><i>Shipping costs for returns are the responsibility of the customer unless the return is due to a defect in quality.</i></h5>
+                <br>
+                <p class="fs-4">Embrace and elevate your style with our Silakbo Apparel <i><?php echo $fetch_products['name']; ?> </i>  T-shirt. Order now and experience the perfect blend of comfort, style, and mindfulness delivered right to your door.</p>
               </div>
             </form>
             <?php
@@ -190,6 +220,7 @@
             id="name"
             placeholder="Your name"
             required
+            disabled
           />
         </div>
         <div class="col-lg-4 col-sm-4 m">
@@ -200,6 +231,7 @@
             id="email"
             placeholder="Your email"
             required
+            disabled
           />
         </div>
         <div class="col-lg-8 col-sm-8 p1">
@@ -209,28 +241,26 @@
             id="feed"
             cols="60"
             rows="5"
+            disabled
           ></textarea>
         </div>
         <div class="col-lg-8 col-sm-8 p1">
           <label for="image">Upload image: </label>
-          <input type="file" id="image" class="form-control">
+          <input type="file" id="image" class="form-control" disabled>
         </div>
       </form>
       <div class="container p-3 text-center">
         <label for="feedback"></label>
-        <button class="btn btn-dark">
-          <a href="" class="text-white">SEND FEEDBACK</a>
+        <button class="btn btn-dark" disabled>
+          <a href="" class="text-white " >SEND FEEDBACK</a>
         </button>
       </div>
     </div>
     </div>
     <div class="container" style="padding: 30px;">
     </div>
-    <div class="container">
-      <div class="text-center" style="padding: 30px;">
-        <h1>PRODUCT REVIEW</h1>
-      </div>
-    </div>
+    <?php include 'feedback.php' ?>
+              
 
     <?php 
         include 'footer.php'

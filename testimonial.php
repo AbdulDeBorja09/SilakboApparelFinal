@@ -35,36 +35,11 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Poiret+One&family=Rajdhani:wght@300&display=swap");
     </style>
-    <script src="main.js"></script>
-    <title>Silakbo | Home</title>
+    <title>Silakbo | Feedback</title>
   </head>
   <body>
     <?php include 'header.php' ?>
-    <div class="container" style="padding: 50px;">
-      <div class="text-center">
-        <h1>SILAKBO REVIEW</h1>
-      </div>
-      <div class="row">
-        <?php 
-          $select_review = mysqli_query($conn, "SELECT * FROM `review`") or die ('query failed');
-          if(mysqli_num_rows($select_review)>0){
-              while($fetch_review = mysqli_fetch_assoc($select_review)){
-          ?>
-              <div class="shadow-sm" style="padding: 30px;">
-                <div class="container">
-                  <h4><?php echo $fetch_review['name']; ?></h4>
-                  <p><?php echo $fetch_review['message']; ?></p>
-                  <h6><?php echo $fetch_review['date']; ?></h6>
-                </div>
-              </div>
-            <?php 
-              }
-            }
-          ?>
-    </div>
-  </div>
-
-
+    <?php include 'feedback.php' ?>
    <?php include 'footer.php' ?>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

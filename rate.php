@@ -48,7 +48,7 @@
     ></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="path/to/sweetalert2.min.css" />
-    <title>Silakbo | Check Out</title>
+    <title>Rate Us</title>
   </head>
   <body>
     <?php include 'header.php' ?>

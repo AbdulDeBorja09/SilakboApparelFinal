@@ -58,7 +58,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Poiret+One&family=Rajdhani:wght@300&display=swap");
     </style>
-    <title>Silakbo | Sign Up</title>
+    <title>Silakbo | Login</title>
   </head>
   <body>
     <div class="login">

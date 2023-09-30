@@ -62,7 +62,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Arsenal&family=Poiret+One&family=Rajdhani:wght@300&display=swap");
     </style>
-    <title>Silakbo | Products</title>
+    <title>Silakbo | Wishlist</title>
   </head>
   <body>
     <?php 
