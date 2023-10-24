@@ -64,7 +64,6 @@
           <h5><b>Name: </b><?php echo $fetch_user['name']; ?></h5>
           <h6><b>User ID: </b><?php echo $fetch_user['id']; ?></h6>
           <h6><b>Email: </b><?php echo $fetch_user['email']; ?></h6>
-          <h6><b>Phone: </b><?php echo $fetch_user['phone_num']; ?></h6>
           <h6><b>User Type: </b> <?php echo $fetch_user['user_type']; ?></h6>
           <br>
           <a name="delete" href="admin_user.php?delete=<?php echo $fetch_user ['id']; ?>;" onclick="return confirm('Delete this message?');" class="btn w-75 mx-auto btn-outline-dark"> Delete</a>
